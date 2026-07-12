@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        body{
+
+            font-family:'Poppins',sans-serif;
+
+            background:#f4f7fc;
+
+        }
+
+        .dashboard-card{
+
+            width:500px;
+
+            border:none;
+
+            border-radius:15px;
+
+            box-shadow:0px 5px 20px rgba(0,0,0,0.15);
+
+        }
+
+        .brand{
+
+            color:#2563eb;
+
+            font-weight:bold;
+
+        }
+
+        .btn{
+
+            font-weight:500;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+
+        <div class="card dashboard-card p-4">
+
+            <h2 class="text-center brand">
+
+                <i class="bi bi-mortarboard-fill"></i>
+
+                LearnSphere
+
+            </h2>
+
+            <p class="text-center text-muted">
+
+                Student Dashboard
+
+            </p>
+
+            <div class="d-grid gap-3">
+
+                <a
+                    href="/purchase"
+                    class="btn btn-primary"
+                >
+
+                    <i class="bi bi-cart-plus"></i>
+
+                    Purchase Course
+
+                </a>
+
+                <a
+                    href="/mycourses"
+                    class="btn btn-primary"
+                >
+
+                    <i class="bi bi-journal-bookmark-fill"></i>
+
+                    My Courses
+
+                </a>
+
+                <a
+                    href="/logout"
+                    class="btn btn-danger"
+                >
+
+                    <i class="bi bi-box-arrow-right"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

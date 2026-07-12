@@ -1,0 +1,56 @@
+package com.learnSphere.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+public class Comment {
+
+    @Id
+    int commentId;
+
+    String comment;
+
+    @ManyToOne
+    Lesson lesson;
+
+    public Comment() {
+    }
+
+    public Comment(int commentId, String comment, Lesson lesson) {
+        this.commentId = commentId;
+        this.comment = comment;
+        this.lesson = lesson;
+    }
+
+    public int getCommentId() {
+        return commentId;
+    }
+
+    public void setCommentId(int commentId) {
+        this.commentId = commentId;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public Lesson getLesson() {
+        return lesson;
+    }
+
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
+    }
+
+	@Override
+	public String toString() {
+		return "Comment [commentId=" + commentId + ", comment=" + comment + ", lesson=" + lesson + "]";
+	}
+    
+}
