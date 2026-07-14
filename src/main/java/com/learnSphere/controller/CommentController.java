@@ -56,6 +56,6 @@ public class CommentController {
 
 	    model.addAttribute("commentList", commentList);
 
-	    return "viewcomments";
+	    return "viewComments";
 	}
 }

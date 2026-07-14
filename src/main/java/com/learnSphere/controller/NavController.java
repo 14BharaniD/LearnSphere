@@ -23,13 +23,13 @@ public class NavController {
 	@GetMapping("/addCourse")
 	public String addCourse()
 	{
-		return "addCourse";
+		return "courseAdd";
 	}
 	
 	@GetMapping("/addLesson")
 	public String addLesson()
 	{
-		return "addLesson";
+		return "lessonAdd";
 	}
 	
 	@GetMapping("/logout")

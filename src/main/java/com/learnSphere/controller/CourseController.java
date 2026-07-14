@@ -89,7 +89,7 @@ public class CourseController {
 	{
 		Course course = cservice.getCourse(courseId);
 		model.addAttribute("course", course);
-		return "editcourse";
+		return "courseEdit";
 	}
 	
 	@PostMapping("/updateCourse")

@@ -86,7 +86,7 @@ public class LessonController {
 	{
 		Lesson lesson = lservice.getLesson(lessonId);
 		model.addAttribute("lesson", lesson);
-		return "editlesson";
+		return "lessonEdit";
 	}
 	
 	@PostMapping("/updateLesson")
