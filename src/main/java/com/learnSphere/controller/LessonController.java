@@ -111,4 +111,44 @@ public class LessonController {
 	    
 	    return "redirect:/viewLessonsTrainer";
 	}
+	
+	private String convertToEmbedUrl(String url)
+	{
+	    if(url == null || url.isEmpty())
+	    {
+	        return url;
+	    }
+
+	    if(url.contains("watch?v="))
+	    {
+	        return url.replace("watch?v=", "embed/");
+	    }
+
+	    if(url.contains("youtu.be/"))
+	    {
+	        String videoId = url.substring(url.lastIndexOf("/") + 1);
+
+	        if(videoId.contains("?"))
+	        {
+	            videoId = videoId.substring(0, videoId.indexOf("?"));
+	        }
+
+	        return "https://www.youtube.com/embed/" + videoId;
+	    }
+
+	    return url;
+	}
+	
+	@GetMapping("/watchLesson")
+	public String watchLesson(@RequestParam("lessonId") int lessonId, Model model)
+	{
+	    Lesson lesson = lservice.getLesson(lessonId);
+
+	    String videoLink = convertToEmbedUrl(lesson.getLessonLink());
+
+	    model.addAttribute("lesson", lesson);
+	    model.addAttribute("videoLink", videoLink);
+
+	    return "watchLesson";
+	}
 }
